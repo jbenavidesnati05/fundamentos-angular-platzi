@@ -1,1 +1,24 @@
-<p>event-binding works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Envent binding</h2>
+        <button  class="btn btn-success" (click)="activarDesactivar()" >Activar-Desactivar</button>
+        <br>
+        <button  class="btn btn-info" [disabled] = "btnDisabled" >Enviar</button>
+        <br>
+        <h3 *ngIf="activo" style="color: green;" >estoy activo</h3>
+        <h3 *ngIf="desactivado" style="color: red;" >estoy DESACTIVADO</h3>
+        <hr>
+        <h4>Incrementar la edad con un boton</h4>
+
+        <button class="btn btn-danger"  (click)="restarEdad()">edad--</button>
+        <button class="btn btn-primary" (click)="sumarEdad()">edad++</button>
+        <h5>la edad actual es :{{edadActual}}</h5>
+        <progress max="60" [value]="edadActual"></progress>
+        <hr>
+        <h4>otros eventos</h4>
+    </div>
+  </div>
+</div>
+
+
