@@ -7,7 +7,7 @@ import { Component} from '@angular/core';
 })
 export class PropBindingComponent  {
 
-btnDisabled = false
+btnDisabled = true
 nameFull= "Jorge Benavides Nati"
 age=50
 

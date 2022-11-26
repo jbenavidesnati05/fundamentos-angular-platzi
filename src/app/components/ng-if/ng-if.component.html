@@ -1,0 +1,8 @@
+<div class="container">
+  <p>Estructura de control ngIf</p>
+  <input type="text" [(ngModel)]="person1.nombre"/>
+  <br>
+  <p class="alert alert-dark" *ngIf="person1.nombre =='jorge' && person1.profesion =='mecanico'; else bloque" >la persona existe</p>
+  <ng-template  #bloque>la persona no existe</ng-template>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h5>ng-model es una fusion entre prop-binding y event binding</h5>
+      <p>Validacion campo vacio</p>
+      <input class="form-control" type="text" required #nameInput="ngModel" [(ngModel)]="nombre">
+      <h6 *ngIf="!nameInput.valid"  style="color: red;">Debe Ingresar un valor</h6>
+      <h6 *ngIf="nameInput.valid"  style="color: green;">El campo esta diligenciado</h6>
+      <p> Lo que escribas en el input: {{nombre}}</p>
+      <p>Valid:{{nameInput.valid}}</p>
+      <hr>
+      <p>validar numero</p>
+      <input class="form-control" #inputEdad="ngModel" [(ngModel)]="edad" required type="number" max="60" min="18">
+      <h5 *ngIf="inputEdad.valid" style="color: green">dentro del rango de edad</h5>
+      <h5 *ngIf="!inputEdad.valid" style="color: red">fuera del rango de edad</h5>
+      <p>Valid:{{inputEdad.valid}}</p>
+      <hr>
+      <p>Modificando la edad</p>
+      <label for="">Primer numero </label>
+      <input class="form-control" type="number" [(ngModel)]="primerNumero">
+      <br>
+      <label for="">segundo numero </label>
+      <input class="form-control" type="number" [(ngModel)]="segundoNumero">
+      <br>
+      <h6 class="alert alert-primary">La suma es = {{primerNumero +segundoNumero}}</h6>
+      <h6 class="alert alert-warning">La resta es = {{primerNumero -segundoNumero}}</h6>
+      <h6 class="alert alert-success">La multiplicacion es = {{primerNumero *segundoNumero}}</h6>
+      <h6 class="alert alert-secondary">La division es = {{primerNumero/segundoNumero}}</h6>
+    </div>
+  </div>
+</div>
