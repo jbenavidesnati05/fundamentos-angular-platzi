@@ -10,6 +10,9 @@ import { NgModelComponent } from './components/ng-model/ng-model.component';
 import { FormsModule } from '@angular/forms';
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
+import { NgForObjectsComponent } from './components/ng-for-objects/ng-for-objects.component';
+import { NgClassNgStyleComponent } from './components/ng-class-ng-style/ng-class-ng-style.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { NgForComponent } from './components/ng-for/ng-for.component';
     EventBindingComponent,
     NgModelComponent,
     NgIfComponent,
-    NgForComponent
+    NgForComponent,
+    NgForObjectsComponent,
+    NgClassNgStyleComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,

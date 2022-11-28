@@ -1,7 +1,13 @@
+<h3>ng-for</h3>
 <div class="container">
-  <h3>ng-for</h3>
-
-  <ul>
-    <li *ngFor="let name of names">{{name}}</li>
-  </ul>
+  <div class="col">
+    <input class="form-control" type="text" required #nameInput="ngModel" [(ngModel)]="newName">
+    <h6 class="alert alert-danger mt-4" *ngIf="!nameInput.valid">El campo no puede estar vacio</h6>
+    <br>
+    <button class="btn btn-dark mb-4 " (click)="addName()">Add name</button>
+    <ul>
+      <li *ngIf="names.length === 0">No hay campos en la lista</li>
+      <li class="mt-1" *ngFor="let name of names; index as i "> {{i+1}}=>{{name}} <button (click)="deleteName(i)"class="btn btn-secondary">delete</button></li>
+    </ul>
+  </div>
 </div>

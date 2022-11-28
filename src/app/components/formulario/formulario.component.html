@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>formulario</h3>
+        <form (ngSubmit)="onRegister()" #myForm = "ngForm">
+              <label for="name">Nombre </label>
+              <input class="form-control" type="text" id="name" name="name" [(ngModel)]="register.name" required>
+              <p>Mensajes de error</p>
+              <label for="email">Email </label>
+              <input class="form-control" type="email" id="email" name="email" [(ngModel)]="register.email" required>
+              <p>Mensajes de error</p>
+              <label for="pwd">Passsword</label>
+              <input class="form-control" type="text" id="pwd" name="pwd" [(ngModel)]="register.pwd" required>
+              <p>Mensajes de error</p>
+            <button [disabled]="myForm.invalid" type="submit" class="btn btn-success m-2" >Register</button>
+            <button type="button" class="btn btn-danger btn-block m-2" >other action</button>
+        </form>
+    </div>
+  </div>
+</div>

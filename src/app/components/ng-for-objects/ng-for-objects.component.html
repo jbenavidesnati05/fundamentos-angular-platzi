@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>ng-for en objetos</h1>
+    <div class="row product">
+      <div class=" col m-1" *ngFor="let product of products" style="border: 1px solid rgb(28, 28, 109);">
+        <h6>{{product.name}}</h6>
+        <img [src]="product.image" width="100" alt="imagen">
+        <p>{{product.price | currency}}</p>
+        <p>Categoria: {{product.category}}</p>
+        <button class="btn btn-primary">Agregar</button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+
+<div class="container">
+  <h3>ng-class-ng-style </h3>
+  <div class="row">
+    <div class="col">
+      <input class="form-control" type="text" [(ngModel)] ="person.name" required #nameInput="ngModel">
+      <p class="messageError" [class.invalid]="nameInput.valid">El campo es requerido</p>
+    </div>
+  </div>
+</div>
